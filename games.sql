@@ -3,8 +3,8 @@
 --drop table temp
 
 --create and use new db
-create database videojatek
-use videojatek
+create database games
+use games
 GO
 
 --setting up publisher table
@@ -56,7 +56,7 @@ EXEC sp_add_job
 GO
 
 declare @path varchar(max)
-set @path = 'C:\Users\Adam\Documents\SQL Server Management Studio\games.txt'
+set @path = 'C:\Users\Adam\Documents\SQL Server Management Studio\games.txt' --give your filepath here!!!
 declare @insert_into_game varchar(max) = N'bulk insert videojatek..temp 
 from '''+@path+'''
 with
@@ -84,7 +84,7 @@ EXEC sp_add_jobstep
 @retry_interval = 1
 GO
 
-EXEC sp_add_schedule  
+EXEC sp_add_schedule  --customize to change periodicity!!!
 @schedule_name = N'RunEveryMinute',  
 @freq_type = 4, --daily basis
 @freq_interval = 1, --don't use this
@@ -122,7 +122,7 @@ GO
 --GO
 
 --check tables
-use videojatek
+use games
 select * from publisher order by name
 select * from game order by name
 select * from temp order by name

@@ -1,0 +1,7 @@
+name;category;developer_name;publisher_name
+GTA V;FPS;Rockstar;Rockstar Games
+RDR 2;FPS;Rockstar;Rockstar Games
+Assassin's Creed;RPG;Ubisoft Montreal;Ubisoft
+Assassin's Creed;RPG;Ubisoft Montreal;Ubisoft
+Valami game;TFS;Rockstar;Rockstar Games
+Valami hiba;GFR;sdgvfg;vdbBTEBbnbetBREB
